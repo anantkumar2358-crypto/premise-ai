@@ -1,0 +1,71 @@
+/* Custom styles and micro-interactions */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+.matrix-cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.matrix-cell:hover {
+  filter: brightness(1.2);
+  transform: scale(1.04);
+}
+
+.matrix-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.matrix-dot:hover {
+  transform: scale(1.4);
+}
+
+.evidence-quote-box {
+  border-left: 3px solid #6366f1;
+  background: rgba(99, 102, 241, 0.05);
+  transition: border-color 0.2s ease;
+}
+
+.evidence-quote-box:hover {
+  border-left-color: #818cf8;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.45);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
